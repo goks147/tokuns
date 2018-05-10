@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title> RWD </title>
+ <meta charset="utf-8">
+ <!-- 1st step -->
+ <!-- define viewport - user visible area -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- 2nd step -->
+ <!-- define grid view, ususally 12 columns grid view -->
+ <style>
+ /* first step for grid view */
+ *{box-sizing: border-box;}
+  /* second step you can define columns */
+  /* sum of all the columns width should be 100% for one row */
+  /* first for mobile */
+  [class*="col-"] {  /* every column will have width 100% */
+        width: 100%;  
+    }
+
+    @media only screen and (min-width: 300px){
+ .col-m-1 {width: 8.33%;}
+ .col-m-2 {width: 16.66%;}
+ .col-m-3 {width: 25%;}
+  .col-m-4 {width: 33.33%;}
+ .col-m-5 {width: 41.66%;}
+ .col-m-6 {width: 50%;}
+  .col-m-7 {width: 58.33%;}
+ .col-m-8 {width: 66.66%;}
+ .col-m-9 {width: 75%;}
+  .col-m-10 {width: 83.33%;}
+ .col-m-11 {width: 91.66%;}
+ .col-m-12 {width: 100%;}
+    }
+
+    /* style for big screen */
+    @media only screen and (min-width: 600px) {
+  .col-1 {width: 8.33%;}
+ .col-2 {width: 16.66%;}
+ .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+ .col-5 {width: 41.66%;}
+ .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+ .col-8 {width: 66.66%;}
+ .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+ .col-11 {width: 91.66%;}
+ .col-12 {width: 100%;}
+    }
+    /* max-width means less than, min-width means greater than */
+    /* max-width: 400px ; - less than 400 px, width < 400 px , min-width:400px; - greater than 400px,  width > 400px */
+ @media only screen and (max-width: 400px) { /* less than 400px */
+    /* For mobile phones: */
+    
+ }
+
+ /* third step for grid view */
+ [class*="col-"] {
+  float:left;
+  border:2px solid red;
+  padding:15px;
+  background-color: pink;
+ }
+ /*  fourth step, add rows */https://ssl.pstatic.net/sstatic/search/nlogo/20180504161218.png
+ .row::after {
+    content: "";
+    clear: both;
+    display: table;
+ } 
+ </style>
+</head>
+<body>
+ <div class="row">
+ <div class="col-12 col-m-12" style="background-color:pink"> col-12 </div>
+ </div>
+ <div class="row">
+ <div class="col-3 col-m-6" style="background-color:pink"> col-3</div>
+ <div class="col-6 col-m-6" >col-6 </div>
+ <div class="col-3 col-m-12" style="background-color:pink"> col-3</div>
+ </div>
+ <div class="row">
+ <div class="col-12 col-m-12" style="background-color:pink"> col-12 </div>
+ </div>
+</body>
+</html>
